@@ -6,6 +6,9 @@ const app = express()
 const port = 3000
 app.use(morgan('combined'))
 app.use(express.static(path.join(__dirname, 'public')));    
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+
 //Template engine
 app.engine(
     'hbs',
@@ -21,6 +24,9 @@ app.get('/trang-chu', (req, res) => {
 })
 app.get('/news', (req, res) => {
     res.render('new');
+})
+app.get('/search', (req, res) => {
+    res.render('search');
 })
 
 app.listen(port, () => {
