@@ -1,0 +1,15 @@
+<form action="/courses/{{courses._id}}?_method=PUT" method="post">
+    <div class="form-group">
+        <label for="name">Tên khóa học</label>
+        <input type="text" class="form-control" value= "{{courses.name}}"placeholder="Name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="description">Mô tả</label>
+        <input type="text" class="form-control" value= "{{courses.description}}"placeholder="description" name="description">
+    </div>
+    <div class="form-group">
+        <label for="idVideo">videoID</label>
+        <input type="text" class="form-control" value= "{{courses.idVideo}}"placeholder="videoID" name="idVideo">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
